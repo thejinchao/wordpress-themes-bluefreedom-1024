@@ -1,0 +1,39 @@
+/*
+Theme Name:	BlueFreedom-1024
+Template:	bluefreedom
+*/
+
+@import url("../bluefreedom/style.css");
+
+#wrapper {
+	width: 1024px;
+	box-shadow: 0 0 1px 1px #888;
+	border-radius: 6px;
+}
+
+body {
+	background: #e7e7e7;
+}
+
+
+
+#site-title {
+	padding-top: 72px; 
+	font-size: 32px; 
+	text-align:center;
+}
+
+#site-description {
+	font-size: 12px; 
+	text-align:center;
+}
+
+#hb {
+	height:200px;
+}
+
+
+#access, .menu-header, div.menu, #colophon, #hb, #main, #wrapper {
+	width: 1024px;
+}
+
