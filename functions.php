@@ -1,5 +1,14 @@
 <?php
 
+function bf_cc_desc() {
+	printf("\xE6\x9C\xAC\xE7\xBD\x91\xE7\xAB\x99\xE9\x81\xB5\xE5\xAE\x88");
+	printf("<a target='_blank' href='http://creativecommons.org/licenses/by-nc-sa/3.0/deed.zh' target='_blank'>");
+	printf("CC\xE7\x89\x88\xE6\x9D\x83\xE5\x8D\x8F\xE8\xAE\xAE");
+	printf("</a>&nbsp;");
+	printf("\xE8\xBD\xAC\xE8\xBD\xBD\xE8\xAF\xB7\xE6\xB3\xA8\xE6\x98\x8E\xE5\x87\xBA\xE8\x87\xAA");
+	printf("<a target='_blank' href='http://www.thecodeway.com/blog'>www.thecodeway.com</a>");
+}
+
 function bf_setup() {
 
 	// Post Format support. You can also use the legacy "gallery" or "asides" (note the plural) categories.
@@ -57,6 +66,15 @@ function bf_setup() {
 		
 	) );
 }
+
+function fix_ssl_attachment_url( $url ) {
+
+	if ( is_ssl() )
+		$url = str_replace( 'http://', 'https://', $url );
+	return $url;
+
+}
+add_filter( 'wp_get_attachment_url', 'fix_ssl_attachment_url' );
 
 
 
